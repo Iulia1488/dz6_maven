@@ -10,7 +10,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 180;
-        int actual = service.sumAllSales(sales);
+        int actual = (int) service.sumAllSales(sales);
         Assertions.assertEquals(actual, expected);
     }
 
@@ -28,7 +28,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 8;
-        int actual = service.maxSales(sales);
+        int actual = (int) service.maxSales(sales);
         Assertions.assertEquals(actual, expected);
     }
 
@@ -37,7 +37,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 9;
-        int actual = service.minSales(sales);
+        int actual = (int) service.minSales(sales);
         Assertions.assertEquals(actual, expected);
     }
 
