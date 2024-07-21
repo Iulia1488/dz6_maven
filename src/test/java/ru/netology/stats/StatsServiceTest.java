@@ -8,7 +8,7 @@ public class StatsServiceTest {
     @Test
     void statisticsSumAllSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 180;
         int actual = (int) service.sumAllSales(sales);
         Assertions.assertEquals(actual, expected);
@@ -17,7 +17,7 @@ public class StatsServiceTest {
     @Test
     void statisticsAverageSumSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         double expected = 15;
         double actual = service.averageSumSales(sales);
         Assertions.assertEquals(actual, expected);
@@ -26,7 +26,7 @@ public class StatsServiceTest {
     @Test
     void statisticsMaxMonth() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 8;
         int actual = (int) service.maxSales(sales);
         Assertions.assertEquals(actual, expected);
@@ -35,7 +35,7 @@ public class StatsServiceTest {
     @Test
     void statisticsMinMonth() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 9;
         int actual = (int) service.minSales(sales);
         Assertions.assertEquals(actual, expected);
@@ -44,7 +44,7 @@ public class StatsServiceTest {
     @Test
     void statisticsSalesBelowAverage() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
         int actual = service.salesBelowAverage(sales);
         Assertions.assertEquals(actual, expected);
@@ -53,7 +53,7 @@ public class StatsServiceTest {
     @Test
     void statisticsSalesAboveAverage() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
         int actual = service.salesBelowAverage(sales);
         Assertions.assertEquals(actual, expected);
